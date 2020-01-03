@@ -1,10 +1,15 @@
 package rocks.zipcode.io.quiz4.collections;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup {
+public class SimpleStringGroup extends List {
+
     public SimpleStringGroup() {
+
         throw new UnsupportedOperationException("Method not yet implemented");
     }
 
