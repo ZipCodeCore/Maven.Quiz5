@@ -15,14 +15,12 @@ public class StringAssembler {
     }
 
     public StringAssembler append(String str) {
-        return null;
+        this.string += str;
+        this.string += delimeter;
+        return this;
     }
 
     public String assemble() {
-        return null;
-    }
-
-    public String getString() {
-        return string;
+        return this.string.substring(0,string.length()-1);
     }
 }
