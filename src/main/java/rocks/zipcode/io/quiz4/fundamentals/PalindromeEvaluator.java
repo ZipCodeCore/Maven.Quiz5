@@ -9,10 +9,15 @@ public class PalindromeEvaluator {
     }
 
     public static Boolean isPalindrome(String string) {
-        return null;
+        return string.equals(reverseString(string));
     }
 
     public static String reverseString(String string) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for(int i = string.length() - 1; i >= 0; i--){
+            sb.append(string.charAt(i));
+        }
+
+        return sb.toString();
     }
 }
