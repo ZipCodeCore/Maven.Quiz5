@@ -7,14 +7,14 @@ import java.util.ArrayList;
  */
 public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
+        StringEvaluator evaluator = new StringEvaluator();
+        String[] allSubstrings = evaluator.getAllSubstrings(string);
+
         ArrayList<String> palindromeList = new ArrayList<>();
-        for(int i = 0; i < string.length(); i++){
-            for(int j = i+1; j <= string.length(); j++){
-                if(isPalindrome(string.substring(i,j)) && !palindromeList.contains(string.substring(i,j))){
-                    palindromeList.add(string.substring(i,j));
-                }
+        for(String s: allSubstrings)
+            if(isPalindrome(s) && !palindromeList.contains(s)){
+                palindromeList.add(s);
             }
-        }
 
         return palindromeList.toArray(new String[0]);
     }
