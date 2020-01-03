@@ -7,7 +7,6 @@ public class    ComparableTreeSet<_> {
     public ComparableTreeSet(_... arr) {
     }
 
-
     public ComparableTreeSet() {
     }
 
