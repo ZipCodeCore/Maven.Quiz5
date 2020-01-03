@@ -41,6 +41,6 @@ public class SimpleStringGroup implements Iterable {
 
     @Override
     public Iterator iterator() {
-        return null;
+        return this.stringList.iterator();
     }
 }
