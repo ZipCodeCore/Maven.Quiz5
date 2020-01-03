@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<_>{
+public class Group<_> implements Iterable<_>, GroupInterface<_> {
     List<_>list;
     public Group() {
         this.list = new ArrayList<_>() ;{
@@ -41,8 +41,6 @@ public class Group<_>{
         list = new ArrayList<>();
 
         }
-
-
 
     public Iterator<_> iterator() {
         return list.listIterator();
