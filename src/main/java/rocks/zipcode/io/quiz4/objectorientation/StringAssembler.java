@@ -7,11 +7,11 @@ import java.util.ArrayList;
  */
 public class StringAssembler {
     Character delimeter;
-    ArrayList<String> stringList;
+    String string;
 
     public StringAssembler(Character delimeter) {
         this.delimeter = delimeter;
-        this.stringList = new ArrayList<>();
+        this.string = "";
     }
 
     public StringAssembler append(String str) {
@@ -20,5 +20,9 @@ public class StringAssembler {
 
     public String assemble() {
         return null;
+    }
+
+    public String getString() {
+        return string;
     }
 }
