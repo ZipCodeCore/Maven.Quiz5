@@ -28,7 +28,6 @@ public class StringGroupIterableTest {
         test("the", "quick", "brown");
     }
 
-
     @Test
     public void test4() {
         test("the", "quick", "brown", "fox");
