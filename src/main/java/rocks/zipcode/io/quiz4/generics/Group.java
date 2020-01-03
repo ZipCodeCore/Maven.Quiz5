@@ -2,11 +2,12 @@ package rocks.zipcode.io.quiz4.generics;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.function.Consumer;
 
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<_> {
+public class Group<_> implements GroupInterface{
 
     ArrayList<_> result = new ArrayList<>();
 
@@ -15,24 +16,26 @@ public class Group<_> {
     }
 
     public Integer count() {
-
         return result.size();
     }
 
-    public void insert(_ value) {
-        result.add(value);
-    }
-
-    public Boolean has(_ value) {
-        return result.contains(value);
+    @Override
+    public Boolean has(Object valueToInsert) {
+        return result.contains(valueToInsert);
     }
 
     public _ fetch(int indexOfValue) {
         return result.get(indexOfValue);
     }
 
-    public void delete(_ value) {
-        result.remove(value);
+    @Override
+    public void insert(Object string) {
+        result.add((_) string);
+    }
+
+    @Override
+    public void delete(Object valueToInsert) {
+        result.remove(valueToInsert);
     }
 
     public void clear() {
@@ -41,6 +44,11 @@ public class Group<_> {
 
     public Iterator<_> iterator() {
         return null;
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+
     }
 
     @Override
