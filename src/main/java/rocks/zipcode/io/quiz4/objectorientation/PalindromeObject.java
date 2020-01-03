@@ -12,7 +12,7 @@ public class PalindromeObject {
     }
 
     public String[] getAllPalindromes(){
-        return null;
+        return PalindromeEvaluator.getAllPalindromes(string);
     }
 
     public Boolean isPalindrome(){
