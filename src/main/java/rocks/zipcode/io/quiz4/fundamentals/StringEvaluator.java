@@ -33,7 +33,18 @@ public class StringEvaluator {
     }
 
     public static String[] getCommonSubstrings(String string1, String string2) {
-        return null;
+        String [] s1Substrings = getAllSubstrings(string1);
+        String [] s2Substrings = getAllSubstrings(string2);
+        ArrayList<String> temp = new ArrayList<>();
+
+        for (String each : s1Substrings){
+            for (String each2 : s2Substrings){
+                if (each.equals(each2)) temp.add(each2);
+            }
+        }
+
+        String [] result = new String[temp.size()];
+        return temp.toArray(result);
     }
 
     public static String getLargestCommonSubstring(String string1, String string2) {
