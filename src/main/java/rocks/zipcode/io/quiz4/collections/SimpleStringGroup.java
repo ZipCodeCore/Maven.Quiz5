@@ -1,11 +1,16 @@
 package rocks.zipcode.io.quiz4.collections;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author leon on 11/12/2018.
  */
 public class SimpleStringGroup {
+    private List list;
+
     public SimpleStringGroup() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        this.list = new ArrayList();
     }
 
     public Integer count() {
