@@ -43,12 +43,14 @@ public class SimpleStringGroup implements Iterable {
 
     @Override
     public Iterator iterator() {
-        return null;
+        return this.result.iterator();
     }
 
     @Override
     public void forEach(Consumer action) {
-
+        for(String each : result){
+            action.accept(each);
+        }
     }
 
 }
