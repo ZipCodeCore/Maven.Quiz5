@@ -19,6 +19,9 @@ public class ZipCodeWilmington {
     }
 
     public void lecture(double numberOfHours) {
+        for (Student each : allStudents){
+            each.learn(numberOfHours);
+        }
     }
 
     public Map<Student, Double> getStudyMap() {
