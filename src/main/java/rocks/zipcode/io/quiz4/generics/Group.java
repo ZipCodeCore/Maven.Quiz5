@@ -42,4 +42,9 @@ public class Group<_> {
     public Iterator<_> iterator() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return result.toString();
+    }
 }
