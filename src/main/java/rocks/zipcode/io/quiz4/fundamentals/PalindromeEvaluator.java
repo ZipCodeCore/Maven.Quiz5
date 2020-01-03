@@ -1,11 +1,22 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author leon on 18/12/2018.
  */
 public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
-        return null;
+        List<String> finalArray = new ArrayList<>();
+        String [] result = StringEvaluator.getAllSubstrings(string);
+        for (String each : result){
+            if (isPalindrome(each)) finalArray.add(each);
+        }
+
+        String [] temp = new String[finalArray.size()];
+
+        return finalArray.toArray(temp);
     }
 
     public static Boolean isPalindrome(String string) {
