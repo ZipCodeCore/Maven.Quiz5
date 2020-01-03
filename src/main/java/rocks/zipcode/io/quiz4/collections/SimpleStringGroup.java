@@ -9,6 +9,7 @@ public class SimpleStringGroup {
     }
 
     public Integer count() {
+
         return null;
     }
 
