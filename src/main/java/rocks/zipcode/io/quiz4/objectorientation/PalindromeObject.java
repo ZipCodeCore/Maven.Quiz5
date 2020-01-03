@@ -20,6 +20,7 @@ public class PalindromeObject {
     }
 
     public String reverseString(){
-        return null;
+
+        return PalindromeEvaluator.reverseString(string);
     }
 }
