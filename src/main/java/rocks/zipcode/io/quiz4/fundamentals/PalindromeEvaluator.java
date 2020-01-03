@@ -9,7 +9,9 @@ public class PalindromeEvaluator {
     }
 
     public static Boolean isPalindrome(String string) {
-        return null;
+        String reversed = reverseString(string);
+
+        return string.equals(reversed);
     }
 
     public static String reverseString(String string) {
