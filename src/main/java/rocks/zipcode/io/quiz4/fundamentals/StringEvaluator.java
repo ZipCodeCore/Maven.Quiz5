@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author leon on 11/12/2018.
  */
-public class StringEvaluator {
+public class StringEvaluator  {
     public static String[] getAllSubstrings(String string) {
         List<String> substrList = new ArrayList<String>();
 
