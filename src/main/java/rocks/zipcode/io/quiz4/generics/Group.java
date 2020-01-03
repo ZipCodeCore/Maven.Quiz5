@@ -2,6 +2,7 @@ package rocks.zipcode.io.quiz4.generics;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -9,7 +10,7 @@ import java.util.function.Consumer;
  */
 public class Group<_> implements GroupInterface{
 
-    ArrayList<_> result = new ArrayList<>();
+    List<_> result = new ArrayList<>();
 
     public Group() {
         //throw new UnsupportedOperationException("Method not yet implemented");
