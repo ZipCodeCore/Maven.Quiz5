@@ -23,7 +23,7 @@ public class ZipCodeWilmington {
 
     public void lecture(double numberOfHours) {
         for(Student s : students){
-            s.studyTime += numberOfHours/students.size();
+            s.studyTime += numberOfHours;
         }
     }
 
