@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup implements Iterable<String>{
+public class SimpleStringGroup implements Iterable<String> {
 
     List<String> list;
 
@@ -17,7 +17,7 @@ public class SimpleStringGroup implements Iterable<String>{
 //    }
 
     public SimpleStringGroup() {
-       list = new ArrayList<>();
+        list = new ArrayList<>();
     }
 
     public Integer count() {

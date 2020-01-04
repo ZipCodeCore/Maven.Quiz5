@@ -1,4 +1,5 @@
 package rocks.zipcode.io.quiz4.objectorientation;
+
 import rocks.zipcode.io.quiz4.fundamentals.PalindromeEvaluator;
 
 /**
@@ -6,21 +7,21 @@ import rocks.zipcode.io.quiz4.fundamentals.PalindromeEvaluator;
  */
 public class PalindromeObject {
     String input;
+
     public PalindromeObject(String input) {
         this.input = input;
     }
 
-    public String[] getAllPalindromes()
-    {
+    public String[] getAllPalindromes() {
         return PalindromeEvaluator.getAllPalindromes(input);
     }
 
-    public Boolean isPalindrome(){
+    public Boolean isPalindrome() {
 
         return PalindromeEvaluator.isPalindrome(input);
     }
 
-    public String reverseString(){
+    public String reverseString() {
 
         return PalindromeEvaluator.reverseString(input);
     }

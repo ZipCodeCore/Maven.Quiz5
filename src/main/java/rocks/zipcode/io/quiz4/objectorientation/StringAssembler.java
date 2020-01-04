@@ -5,6 +5,7 @@ package rocks.zipcode.io.quiz4.objectorientation;
  */
 public class StringAssembler {
     Character delimeter;
+
     public StringAssembler(Character delimeter) {
         this.delimeter = delimeter;
     }

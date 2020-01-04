@@ -10,33 +10,31 @@ public class PalindromeEvaluator {
         List<String> substrList = new ArrayList<String>();
 
 
-        for(int i = 0; i<string.length(); i++) {
-            for(int j = i+1; j<=string.length();j++ ) {
-                substrList.add( string.substring(i,j));
+        for (int i = 0; i < string.length(); i++) {
+            for (int j = i + 1; j <= string.length(); j++) {
+                substrList.add(string.substring(i, j));
             }
         }
 
         ArrayList<String> newList = new ArrayList<String>();
-        for(String element:substrList){
-            if(!newList.contains(element)){
+        for (String element : substrList) {
+            if (!newList.contains(element)) {
                 newList.add(element);
             }
         }
         String[] arr = newList.toArray(new String[0]);
 
 
-   List<String>paliList = new ArrayList<>();
-   for(int i = 0; i< arr.length; i++){
-   if(isPalindrome(arr[i])){
-      paliList.add(arr[i]);
+        List<String> paliList = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (isPalindrome(arr[i])) {
+                paliList.add(arr[i]);
 
-   }
-}
-
+            }
+        }
 
 
         String[] paliArr = paliList.toArray(new String[0]);
-
 
 
         return paliArr;
@@ -45,7 +43,7 @@ public class PalindromeEvaluator {
     public static Boolean isPalindrome(String string) {
         StringBuilder sb = new StringBuilder(string);
         String rev = sb.reverse().toString();
-        if(rev .equals(string)){
+        if (rev.equals(string)) {
             return true;
         }
 
