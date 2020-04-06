@@ -28,6 +28,7 @@ public class StringEvaluator {
         getAllSubstrings(string2);
         if (getAllSubstrings(string1).equals(getAllSubstrings(string2))){
             //not sure where to go from here at the moment
+
         }
         return null;
     }
