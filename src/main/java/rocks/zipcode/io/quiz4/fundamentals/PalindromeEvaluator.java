@@ -1,5 +1,8 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author leon on 18/12/2018.
  */
@@ -15,8 +18,25 @@ public class PalindromeEvaluator {
 //        } else {
 //            System.out.println("Given String is not palindrome");
 //        }
+        Set<String> subs = new HashSet<>();
+        Set<String> pals = new HashSet<>();
+        for (int i = 0; i < string.length(); i++) {
+            for (int j = i + 1; j <= string.length(); j++) {
+                subs.add(string.substring(i, j));
+            }
+        }
+        for (String s : subs) {
+            if (isPalindrome(s)) {
+                pals.add(s);
+            }
+        }
+        String[] output = new String[pals.size()];
+        int i = 0;
+        for (String s : pals) {
+            output[i++] = s;
+        }
+        return output;
 
-        return null;
 }
     public static Boolean isPalindrome(String string) {
 
