@@ -1,5 +1,7 @@
 package rocks.zipcode.io.quiz4.objectorientation;
 
+import rocks.zipcode.io.quiz4.fundamentals.PalindromeEvaluator;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,30 +18,16 @@ public class PalindromeObject {
 
     public String[] getAllPalindromes() {
 
-        Set<String> result = new HashSet<String>();
-
-        for (int i = 0; i <= input.length(); i++) {
-            for (int j = i + 1; j <= input.length(); j++) {
-                StringBuilder sb = new StringBuilder(input.substring(i,j));
-                if(input.substring(i, j).equals(sb.reverse().toString())) {
-                    result.add(input.substring(i, j));
-                }
-            }
-        }
-
-        String[] toReturn = new String[result.size()];
-        return result.toArray(toReturn);
+        return PalindromeEvaluator.getAllPalindromes(input);
     }
 
     public Boolean isPalindrome(){
 
-        StringBuilder sb = new StringBuilder(input);
-        return input.equals(sb.reverse().toString());
+        return PalindromeEvaluator.isPalindrome(input);
     }
 
     public String reverseString(){
 
-        StringBuilder sb = new StringBuilder(input);
-        return sb.reverse().toString();
+        return PalindromeEvaluator.reverseString(input);
     }
 }

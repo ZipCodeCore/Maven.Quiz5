@@ -1,6 +1,5 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
-
 import java.util.HashSet;
 import java.util.Set;
 

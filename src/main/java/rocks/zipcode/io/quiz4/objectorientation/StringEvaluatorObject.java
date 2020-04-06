@@ -16,14 +16,17 @@ public class StringEvaluatorObject {
     }
 
     public String[] getAllSubstrings() {
+
         return StringEvaluator.getAllSubstrings(str);
     }
 
     public String[] getCommonSubstrings(String secondInput) {
+
         return StringEvaluator.getCommonSubstrings(str, secondInput);
     }
 
     public String getLargestCommonSubstring(String secondInput) {
+
         return StringEvaluator.getLargestCommonSubstring(str, secondInput);
     }
 }

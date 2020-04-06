@@ -1,9 +1,8 @@
 package rocks.zipcode.io.quiz4.generics;
 
 import java.util.Iterator;
-import java.util.Spliterator;
 import java.util.Stack;
-import java.util.function.Consumer;
+
 
 /**
  * @author leon on 11/12/2018.
@@ -46,17 +45,5 @@ public class MyStack<SomeType> implements Iterable<SomeType> {
     public Iterator<SomeType> iterator() {
         return stack.iterator();
     }
-//
-//    @Override
-//    public void forEach(Consumer<? super SomeType> action) {
-//        for (SomeType type : stack) {
-//            action.accept(type);
-//        }
-//
-//    }
-//
-//    @Override
-//    public Spliterator<SomeType> spliterator() {
-//        return null;
-//    }
+
 }
