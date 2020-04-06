@@ -40,7 +40,7 @@ public class    ComparableTreeSet<_ extends Comparable> implements Iterable<_>, 
         if (lowest == -2||lowest>0){
             return 1;
         }
-        if (lowest == -3){
+        if (lowest == - treeSet.size()){
             return -1;
         }
         return Integer.valueOf(null);
