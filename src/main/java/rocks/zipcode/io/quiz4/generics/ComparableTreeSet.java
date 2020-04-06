@@ -29,19 +29,20 @@ public class    ComparableTreeSet<_ extends Comparable> implements Iterable<_>, 
                 if (element.compareTo(element2)>0){
                     counter++;
                 } else if (element.compareTo(element2) <0){
-                    counter --;
+                    counter--;
                 }
             }
-            lowest = counter;
+                lowest = counter;
+
         }
         if (lowest == 0){
             return 0;
         }
-        if ((lowest < 0 && lowest > - treeSet.size()) ||lowest>0){
-            return 1;
-        }
         if (lowest == - treeSet.size()){
             return -1;
+        }
+        if ((lowest < 0 && lowest > - treeSet.size()) ||lowest>0){
+            return 1;
         }
         return Integer.valueOf(null);
     }
@@ -73,5 +74,10 @@ public class    ComparableTreeSet<_ extends Comparable> implements Iterable<_>, 
 
     public void setTreeSet(TreeSet<_> treeSet) {
         this.treeSet = treeSet;
+    }
+
+    @Override
+    public String toString(){
+        return this.treeSet.toString();
     }
 }
