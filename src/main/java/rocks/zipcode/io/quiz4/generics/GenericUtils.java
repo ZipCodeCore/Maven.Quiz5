@@ -9,16 +9,14 @@ public class GenericUtils {
     public static <T extends Comparable<T>> Iterable<? extends Iterable<T>> powerSet(Set<T> originalSet) {
         List<T> S = new ArrayList<>(originalSet);
         long N = (long)Math.pow(2, originalSet.size());
-        ComparableTreeSet<ComparableTreeSet<T>> output = new ComparableTreeSet<>();
+        Set<TreeSet<T>> output = new HashSet<>();
         for (int i = 0; i < N; i++) {
-            ComparableTreeSet<T> inner = new ComparableTreeSet<>();
+            TreeSet<T> inner = new TreeSet<>();
             for (int k = 0; k < S.size(); k++) {
                 if ((i & (1 << k)) != 0) {
                     inner.add(S.get(k));
                 }
-                if (inner.size() > 0) {
-                    output.add(inner);
-                }
+                output.add(inner);
             }
         }
         ArrayList<TreeSet<T>> rev = new ArrayList<>(output);
