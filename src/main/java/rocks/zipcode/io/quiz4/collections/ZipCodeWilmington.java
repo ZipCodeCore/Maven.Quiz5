@@ -1,6 +1,8 @@
 package rocks.zipcode.io.quiz4.collections;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -29,6 +31,10 @@ public class ZipCodeWilmington {
     }
 
     public Map<Student, Double> getStudyMap() {
-        return null;
+        Map<Student, Double> studyMap = new LinkedHashMap<>();
+        for (Student student:students) {
+            studyMap.put(student,student.getTotalStudyTime());
+        }
+        return studyMap;
     }
 }

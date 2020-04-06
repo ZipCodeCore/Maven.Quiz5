@@ -1,5 +1,6 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.EmptyStackException;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -23,14 +24,18 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
     }
 
     public SomeType peek() {
+        if(!stack.isEmpty()){
+            return null;
+        }
         return stack.peek();
 
-        //throw new UnsupportedOperationException("Method not yet implemented");
     }
 
     public SomeType pop() {
-
-        return null;
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stack.pop();
     }
 
     @Override
