@@ -5,6 +5,7 @@ package rocks.zipcode.io.quiz4.collections;
  */
 public class SimpleStringGroup {
     public SimpleStringGroup() {
+
         throw new UnsupportedOperationException("Method not yet implemented");
     }
 
