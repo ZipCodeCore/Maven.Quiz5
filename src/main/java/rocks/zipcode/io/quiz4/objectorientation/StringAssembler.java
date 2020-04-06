@@ -4,14 +4,21 @@ package rocks.zipcode.io.quiz4.objectorientation;
  * @author leon on 11/12/2018.
  */
 public class StringAssembler {
-    public StringAssembler(Character delimeter) {
+    private Character delimeter;
+    String builtSoFar;
+
+    public StringAssembler(Character delimeter)
+    {
+        this.delimeter = delimeter;
     }
 
-    public StringAssembler append(String str) {
+    // TODO: Come back to this
+    public StringAssembler append(String str)
+    {
         return null;
     }
 
     public String assemble() {
-        return null;
+        return builtSoFar;
     }
 }
