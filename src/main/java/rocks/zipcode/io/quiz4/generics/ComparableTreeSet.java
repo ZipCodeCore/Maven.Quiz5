@@ -1,9 +1,12 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.TreeSet;
+
 /**
  * @author leon on 11/12/2018.
  */
-public class ComparableTreeSet<_> {
+public class ComparableTreeSet<_> extends TreeSet implements Comparable<_>{
+
     public ComparableTreeSet(_... arr) {
 
     }
@@ -16,4 +19,8 @@ public class ComparableTreeSet<_> {
         return Integer.valueOf(null);
     }
 
+    @Override
+    public int compareTo(_ o) {
+        return 0;
+    }
 }
