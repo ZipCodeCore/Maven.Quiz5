@@ -1,11 +1,12 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.Iterator;
 import java.util.Stack;
 
 /**
  * @author leon on 11/12/2018.
  */
-public class MyStack<SomeType> {
+public class MyStack<SomeType> implements Iterable<SomeType> {
 
     Stack<SomeType> stack;
 
@@ -30,5 +31,10 @@ public class MyStack<SomeType> {
 
     public SomeType pop() {
         return stack.pop();
+    }
+
+    @Override
+    public Iterator<SomeType> iterator() {
+        return this.iterator();
     }
 }
