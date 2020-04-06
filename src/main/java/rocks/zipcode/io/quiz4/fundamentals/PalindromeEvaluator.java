@@ -1,13 +1,19 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * @author leon on 18/12/2018.
  */
 public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
-        return null;
+        String[] a = StringEvaluator.getAllSubstrings(string);
+        ArrayList<String> list = new ArrayList<>();
+        for(String s :a){
+            if(isPalindrome(s))
+                list.add(s);
+        }
+        return list.toArray(new String[0]);
     }
 
     public static Boolean isPalindrome(String string) {
@@ -29,8 +35,9 @@ public class PalindromeEvaluator {
             temp = c[i];
             c[i] = c[tail];
             c[tail] = temp;
+            tail--;
         }
-        return Arrays.toString(c);
+        return String.valueOf(c);
     }
 
 
