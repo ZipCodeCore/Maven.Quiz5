@@ -1,25 +1,36 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.*;
+
 /**
  * @author leon on 11/12/2018.
  */
-public class MyStack<SomeType> {
+public class MyStack<SomeType> implements Iterable<SomeType> {
+
+    private Stack<SomeType> stack;
+
     public MyStack() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        this.stack = new Stack<>();
     }
 
     public Boolean isEmpty() {
-        return null;
+        return this.stack.isEmpty();
     }
 
     public void push(SomeType i) {
+        this.stack.push(i);
     }
 
     public SomeType peek() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+       return stack.isEmpty() ? null : stack.peek();
     }
 
     public SomeType pop() {
-        return null;
+        return stack.pop();
+    }
+
+    @Override
+    public Iterator<SomeType> iterator() {
+        return stack.iterator();
     }
 }
