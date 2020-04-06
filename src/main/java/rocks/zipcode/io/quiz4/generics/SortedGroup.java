@@ -14,7 +14,7 @@ public class SortedGroup<_> extends Group<_> {
             list.add(value);
         } else if(list.get(list.size()-1).toString().compareTo(value.toString()) == 0 ){
             list.add(value);
-        } else if(list.get(list.size()-1).toString().compareTo(value.toString()) == -1 ){
+        } else if(list.get(list.size() - 1).toString().compareTo(value.toString()) < 0){
             list.add(value);
         } else {
             List<_> newList = new ArrayList<>();
