@@ -6,13 +6,19 @@ package rocks.zipcode.io.quiz4.generics;
 public class SortedGroup<_> extends Group<_> {
     @Override
     public void insert(_ value) {
+
+        list.add(value);
+        list.sort(null);
     }
 
     @Override
     public void delete(_ value) {
+
+        list.remove(value);
     }
 
     public Integer indexOf(_ value) {
-        return null;
+
+        return list.indexOf(value);
     }
 }
