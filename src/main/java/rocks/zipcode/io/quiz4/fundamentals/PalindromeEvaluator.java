@@ -9,10 +9,13 @@ public class PalindromeEvaluator {
     }
 
     public static Boolean isPalindrome(String string) {
-        return null;
+        String reverse = reverseString(string);
+        return reverse.equals(string);
     }
 
     public static String reverseString(String string) {
-        return null;
+        StringBuilder plain = new StringBuilder(string);
+        StringBuilder reverse = plain.reverse();
+        return reverse.toString();
     }
 }
