@@ -43,6 +43,7 @@ public class SimpleStringGroup implements Iterable {
 
     @Override
     public Iterator iterator() {
-        return null;
+
+        return list.iterator();
     }
 }
