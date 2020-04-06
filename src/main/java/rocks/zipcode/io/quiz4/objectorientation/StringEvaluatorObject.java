@@ -6,20 +6,20 @@ import rocks.zipcode.io.quiz4.fundamentals.StringEvaluator;
  * @author leon on 19/12/2018.
  */
 public class StringEvaluatorObject {
-    String str;
+    String st;
     public StringEvaluatorObject(String str) {
-        this.str = str;
+        this.st = str;
     }
 
     public String[] getAllSubstrings() {
-        return null;
+        return StringEvaluator.getAllSubstrings(st);
     }
 
     public String[] getCommonSubstrings(String secondInput) {
-        return null;
+        return StringEvaluator.getCommonSubstrings(st,secondInput);
     }
 
     public String getLargestCommonSubstring(String secondInput) {
-        return StringEvaluator.getLargestCommonSubstring(str, secondInput);
+        return StringEvaluator.getLargestCommonSubstring(st, secondInput);
     }
 }
