@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Group<_> implements Iterable<_>, GroupInterface<_>{
 
-    private List<_> list;
+    protected List<_> list;
 
     public Group() {
         list = new LinkedList<>();
