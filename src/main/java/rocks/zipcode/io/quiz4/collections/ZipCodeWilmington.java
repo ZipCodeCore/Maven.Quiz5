@@ -1,22 +1,39 @@
 package rocks.zipcode.io.quiz4.collections;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author leon on 11/12/2018.
  */
 public class ZipCodeWilmington {
+
+    List<Student> students = new ArrayList<>();
+
     public void enroll(Student student) {
+        students.add(student);
     }
 
     public Boolean isEnrolled(Student student) {
-        return null;
+        if (students.contains(student)) {
+            return true;
+        }
+        return false;
     }
 
     public void lecture(double numberOfHours) {
+        for (Student student : students) {
+            student.learn(numberOfHours);
+        }
     }
 
     public Map<Student, Double> getStudyMap() {
-        return null;
+        Map<Student, Double> map = new HashMap<>();
+        for (Student student : students) {
+            map.put(student, student.getTotalStudyTime());
+        }
+        return map;
     }
 }

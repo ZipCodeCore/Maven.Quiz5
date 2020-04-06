@@ -1,27 +1,30 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author leon on 18/12/2018.
  */
 public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
-        int count = 0;
-        List<String> arrList = new ArrayList<>();
-        for (int i = 0; i <= string.length(); i++) {
-            for (int j = 0; j < string.length(); j++) {
-                if (isPalindrome(string.substring(i, j + 1))) {
-                    arrList.add(string.substring(i, j + 1));
-                    count++;
-                    System.out.println(string.substring(i, j + 1));
+        Set<String> palindromes = new HashSet<>();
+        for (int i = 0; i < string.length(); i++) {
+            for (int j = i + 1; j < string.length(); j++) {
+                if (isPalindrome(string)) {
+                    palindromes.add(string);
+                }
+                if (isPalindrome(string.substring(i, j))) {
+                    palindromes.add(string.substring(i, j));
                 }
             }
         }
-        String[] arr = new String[count];
-        for (int i = 0; i < arr.length - 1; i++) {
-            arr[i] = arrList.get(i);
+        String[] arr = new String[palindromes.size()];
+        int i = 0;
+        for (String element : palindromes) {
+            arr[i++] = element;
         }
         return arr;
     }
