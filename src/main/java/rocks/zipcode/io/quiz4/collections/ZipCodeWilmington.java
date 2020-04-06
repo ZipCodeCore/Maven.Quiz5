@@ -1,12 +1,16 @@
 package rocks.zipcode.io.quiz4.collections;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author leon on 11/12/2018.
  */
 public class ZipCodeWilmington {
+    List<Student> studentList;
+
     public void enroll(Student student) {
+
     }
 
     public Boolean isEnrolled(Student student) {
