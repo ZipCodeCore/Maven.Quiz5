@@ -12,7 +12,7 @@ public class PalindromeObject {
     }
 
     public String[] getAllPalindromes(){
-        return PalindromeEvaluator.getAllPalindromes(input);
+        return null;
     }
 
     public Boolean isPalindrome(){
@@ -20,6 +20,6 @@ public class PalindromeObject {
     }
 
     public String reverseString(){
-        return PalindromeEvaluator.reverseString(input);
+        return new StringBuffer(input).reverse().toString();
     }
 }

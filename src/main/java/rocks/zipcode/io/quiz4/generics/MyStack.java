@@ -1,8 +1,8 @@
 package rocks.zipcode.io.quiz4.generics;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.Spliterator;
+import java.util.Stack;
 import java.util.function.Consumer;
 
 /**
@@ -10,7 +10,7 @@ import java.util.function.Consumer;
  */
 public class MyStack<SomeType> implements Iterable<SomeType>{
 
-    private List<SomeType> list;
+    private Stack<SomeType> stacks = new Stack<>();
     public MyStack() {
 
 
@@ -19,23 +19,30 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
     }
 
     public Boolean isEmpty() {
-        return null;
+        return stacks.isEmpty();
     }
 
     public void push(SomeType i) {
+        stacks.push(i);
     }
 
     public SomeType peek() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        if(stacks.size() == 0) {
+            return null;
+        } else {
+            return stacks.peek();
+        }
+
+        //throw new UnsupportedOperationException("Method not yet implemented");
     }
 
     public SomeType pop() {
-        return null;
+        return stacks.pop();
     }
 
     @Override
     public Iterator<SomeType> iterator() {
-        return null;
+        return stacks.iterator();
     }
 
     @Override
