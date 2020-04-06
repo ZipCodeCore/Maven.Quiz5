@@ -30,6 +30,14 @@ public class SortedGroup<T extends Comparable<T>> extends Group<T>  {
         return list.indexOf(value);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        for (T e : list){
+            sb.append(e.toString()).append(", ");
+        }
+        String s = sb.toString().substring(0,sb.length()-2);
+        return s + "]";
+    }
+    }
 
-
-}
