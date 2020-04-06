@@ -27,8 +27,7 @@ public class PalindromeObject {
     }
 
     public String reverseString(){
-        String reverseString = new StringBuilder(input).reverse().toString();
 
-        return reverseString;
+        return ev.reverseString(input);
     }
 }
