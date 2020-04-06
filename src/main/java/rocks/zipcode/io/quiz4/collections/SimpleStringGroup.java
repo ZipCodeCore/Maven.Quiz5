@@ -41,6 +41,21 @@ public class SimpleStringGroup implements Iterable<String>{
 
     @Override
     public Iterator<String> iterator() {
-        return null;
+        return new Iterator<String>() {
+            private int pos = 0;
+            @Override
+            public boolean hasNext() {
+                if(pos < str.size())
+                    return true;
+                return false;
+            }
+
+            @Override
+            public String next() {
+                if(hasNext())
+                    str.get(pos++);
+                return null;
+            }
+        };
     }
 }
