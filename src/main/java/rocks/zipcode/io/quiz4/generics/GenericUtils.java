@@ -19,7 +19,10 @@ public class GenericUtils
 
             for(Integer k = 0; k < setAsList.size(); k++)
             {
-                subset.add(setAsList.get(k));
+                if ((i & (1 << k)) != 0)
+                {
+                    subset.add(setAsList.get(k));
+                }
             }
             powSet.add(subset);
         }
