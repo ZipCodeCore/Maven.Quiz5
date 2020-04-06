@@ -2,13 +2,14 @@ package rocks.zipcode.io.quiz4.generics;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<E> implements Iterable<E> {
+public class Group<E> implements GroupInterface<E> {
         List<E> myCollection;
     public Group() {
         this.myCollection = new ArrayList<>();
@@ -46,13 +47,8 @@ public class Group<E> implements Iterable<E> {
     }
 
     @Override
-    public String toString(){
-        E[] newArray = (E[]) new Array[myCollection.size()];
-        int count = 0;
-        for(E a : myCollection){
-            newArray[count] = a;
-            count++;
-        }
-        return newArray.toString();
+    public String toString() {
+        E[] newArray = (E[]) myCollection.toArray();
+        return Arrays.toString(newArray);
     }
 }

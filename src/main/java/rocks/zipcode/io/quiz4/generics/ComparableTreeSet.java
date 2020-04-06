@@ -8,13 +8,15 @@ import java.util.TreeSet;
  * @author leon on 11/12/2018.
  */
 public class    ComparableTreeSet<E> implements Comparable<E> {
-        Set<E> newSet = new TreeSet<>();
+    private TreeSet<E> newSet;
     public ComparableTreeSet(E... arr) {
+        newSet = new TreeSet<>();
         newSet.addAll(Arrays.asList(arr));
     }
 
 
     public ComparableTreeSet() {
+        this.newSet = new TreeSet<>();
     }
 
     public int compareTo(ComparableTreeSet<E> o) {
