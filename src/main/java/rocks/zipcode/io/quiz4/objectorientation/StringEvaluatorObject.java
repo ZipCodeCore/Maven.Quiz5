@@ -18,7 +18,7 @@ public class StringEvaluatorObject {
     }
 
     public String[] getCommonSubstrings(String secondInput) {
-        return null;
+        return ev.getCommonSubstrings(str, secondInput);
     }
 
     public String getLargestCommonSubstring(String secondInput) {
