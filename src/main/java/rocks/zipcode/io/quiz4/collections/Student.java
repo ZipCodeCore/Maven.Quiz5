@@ -6,7 +6,7 @@ package rocks.zipcode.io.quiz4.collections;
 public class Student {
 
     Integer id;
-    Double totalStudyTime;
+    Double totalStudyTime = 0.0;
 
     public Student() {
         this(null);
