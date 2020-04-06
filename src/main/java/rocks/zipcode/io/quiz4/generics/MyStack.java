@@ -24,10 +24,10 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
     }
 
     public SomeType peek() {
-        if(!stack.isEmpty()){
+        if(stack.isEmpty()){
             return null;
         }
-        return stack.peek();
+        return stack.get(stack.size()-1);
 
     }
 
