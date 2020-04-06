@@ -5,6 +5,15 @@ package rocks.zipcode.io.quiz4.fundamentals;
  */
 public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
+        for(int i = 0; i <= string.length(); i++)
+            for(int j = i; j < string.length(); j++)
+                if(isPalindrome(string.substring(i , j + 1))) {
+                    System.out.println(string.substring(i, j + 1));
+                    String palin = string.substring(i, j + 1);
+                    String[] result = new String[10];
+                    result[i] = palin;
+                    return result;
+                }
         return null;
     }
 
