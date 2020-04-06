@@ -9,7 +9,16 @@ public class PalindromeEvaluator {
     }
 
     public static Boolean isPalindrome(String string) {
-        return null;
+        int i = 0;
+        int j = string.length() - 1;
+        while (i < j){
+            if (string.charAt(i) != string.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
 
     public static String reverseString(String string) {
