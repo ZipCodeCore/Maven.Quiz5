@@ -8,7 +8,7 @@ import java.util.Collections;
 /**
  * @author leon on 18/12/2018.
  */
-public class SortedGroup<_ extends Comparable> extends Group<_> {
+public class SortedGroup<_ extends Comparable<_>> extends Group<_> {
 
     public SortedGroup() {
         super();
