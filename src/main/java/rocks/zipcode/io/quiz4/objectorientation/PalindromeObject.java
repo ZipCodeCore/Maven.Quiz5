@@ -23,7 +23,7 @@ public class PalindromeObject {
 
     public Boolean isPalindrome(){
 
-        return null;
+        return ev.isPalindrome(input);
     }
 
     public String reverseString(){
