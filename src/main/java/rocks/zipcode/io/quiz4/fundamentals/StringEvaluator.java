@@ -24,16 +24,23 @@ public class StringEvaluator {
     }
 
     public static String[] getCommonSubstrings(String string1, String string2) {
-        getAllSubstrings(string1);
-        getAllSubstrings(string2);
-        if (getAllSubstrings(string1).equals(getAllSubstrings(string2))){
-            //not sure where to go from here at the moment
+        Set<String> common = new HashSet<>();
+        String[] arr1 = getAllSubstrings(string1);
+        String[] arr2 = getAllSubstrings(string2);
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                if (arr1[i].equals(arr2[j])){
 
+                    common.add(arr1[i]);
+            }
         }
-        return null;
+        }
+        return common.toArray(new String[common.size()]);
     }
 
     public static String getLargestCommonSubstring(String string1, String string2) {
+        String[] result = getCommonSubstrings(string1, string2);
+
         return null;
     }
 }
