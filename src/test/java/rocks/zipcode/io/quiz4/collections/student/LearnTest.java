@@ -45,6 +45,8 @@ public class LearnTest {
         student.learn(firstLecture);
         student.learn(secondLecture);
         Double actual = student.getTotalStudyTime();
+        System.out.println("expected getTotalStudyTime is --> "+expected);
+        System.out.println("Actual getTotalStudyTime is --> "+actual);
 
         // then
         Assert.assertEquals(expected, actual);
