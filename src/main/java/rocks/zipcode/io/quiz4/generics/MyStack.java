@@ -28,7 +28,7 @@ public class MyStack<SomeType> implements Iterable<SomeType> {
         }
         return stack.peek();
     }
-
+    
     public SomeType pop() {
         return stack.pop();
     }
