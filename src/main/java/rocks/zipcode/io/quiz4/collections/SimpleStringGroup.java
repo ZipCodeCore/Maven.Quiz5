@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Spliterator;
-import java.util.function.Consumer;
 
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup implements Iterable<String> {
-    List<String> str;
+public class SimpleStringGroup implements Iterable {
+    List<String> str = new ArrayList<>();
+
     public SimpleStringGroup() {
         this.str = new ArrayList<>();
     }
@@ -36,17 +36,13 @@ public class SimpleStringGroup implements Iterable<String> {
         str.remove(string);
     }
 
-    public void clear() {str.clear();
+    public void clear() {
+        str.clear();
     }
 
     @Override
     public Iterator<String> iterator() {
-        return null;
-    }
-
-    @Override
-    public void forEach(Consumer<? super String> action) {
-
+        return str.iterator();
     }
 
     @Override

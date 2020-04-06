@@ -4,11 +4,11 @@ package rocks.zipcode.io.quiz4.collections;
  * @author leon on 11/12/2018.
  */
 public class Student {
-    Integer id;
-    Double amountOfHours;
-    Double totalStudyTime;
+    private Integer id;
+    private Double amountOfHours;
+    private Double totalStudyTime;
     public Student() {
-        this(null);
+        this(0);
     }
 
     public Student(Integer id) {
@@ -21,6 +21,6 @@ public class Student {
     }
 
     public Double getTotalStudyTime() {
-        return this.totalStudyTime;
+        return amountOfHours;
     }
 }
