@@ -1,5 +1,9 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Set;
+
 /**
  * @author leon on 18/12/2018.
  */
@@ -9,10 +13,12 @@ public class PalindromeEvaluator {
     }
 
     public static Boolean isPalindrome(String string) {
-        return null;
+        String reverse = reverseString(string);
+        return string.equals(reverse);
     }
 
     public static String reverseString(String string) {
-        return null;
+        StringBuilder sb = new StringBuilder(string);
+        return sb.reverse().toString();
     }
 }

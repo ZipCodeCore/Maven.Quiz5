@@ -9,6 +9,7 @@ public class Student {
     }
 
     public Student(Integer id) {
+
     }
 
     public void learn(Double amountOfHours) {
