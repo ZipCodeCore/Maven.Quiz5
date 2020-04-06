@@ -18,16 +18,16 @@ public class PalindromeObject {
 
     public String[] getAllPalindromes()
     {
-        return ev.getAllPalindromes(input);
+        return PalindromeEvaluator.getAllPalindromes(input);
     }
 
     public Boolean isPalindrome(){
 
-        return ev.isPalindrome(input);
+        return PalindromeEvaluator.isPalindrome(input);
     }
 
     public String reverseString(){
 
-        return ev.reverseString(input);
+        return PalindromeEvaluator.reverseString(input);
     }
 }

@@ -13,7 +13,7 @@ public class StringEvaluator {
     {
 
         // declaration and initialise String Array
-        String str[] = new String[arr.size()];
+        String[] str = new String[arr.size()];
 
         // ArrayList to Array Conversion
         for (int j = 0; j < arr.size(); j++) {

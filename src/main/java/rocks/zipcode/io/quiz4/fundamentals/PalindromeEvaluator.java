@@ -9,7 +9,7 @@ public class PalindromeEvaluator {
     public static String[] getAllPalindromes(String string) {
         StringEvaluator ev = new StringEvaluator();
 
-        String [] allSubs= ev.getAllSubstrings(string);
+        String [] allSubs= StringEvaluator.getAllSubstrings(string);
 
         ArrayList<String> list = new ArrayList<String>();
         for(String s: allSubs)
@@ -23,11 +23,7 @@ public class PalindromeEvaluator {
     public static Boolean isPalindrome(String string) {
         String reverseString = reverseString(string);
 
-        if(string.equals(reverseString)){
-            return true;
-        }
-
-        return false;
+        return string.equals(reverseString);
     }
 
     public static String reverseString(String string) {
