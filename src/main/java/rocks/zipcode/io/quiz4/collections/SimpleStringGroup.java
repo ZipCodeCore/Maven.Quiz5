@@ -4,11 +4,13 @@ package rocks.zipcode.io.quiz4.collections;
  * @author leon on 11/12/2018.
  */
 public class SimpleStringGroup {
+
     public SimpleStringGroup() {
         throw new UnsupportedOperationException("Method not yet implemented");
     }
 
     public Integer count() {
+
         return null;
     }
 
