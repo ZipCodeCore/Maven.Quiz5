@@ -54,6 +54,15 @@ public class StringEvaluator {
     }
 
     public static String getLargestCommonSubstring(String string1, String string2) {
-        return null;
+        String[] commonSubstrings = getCommonSubstrings(string1, string2);
+        Integer length = 0;
+        String longestSubstring = "";
+        for(int i = 0; i < commonSubstrings.length; i++){
+            if(commonSubstrings[i].length() > length){
+                longestSubstring = commonSubstrings[i];
+                length = longestSubstring.length();
+            }
+        }
+        return longestSubstring;
     }
 }
