@@ -1,5 +1,7 @@
 package rocks.zipcode.io.quiz4.generics;
 
+import java.util.Arrays;
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -7,10 +9,10 @@ import java.util.TreeSet;
  */
 public class ComparableTreeSet<_> extends TreeSet implements Comparable {
 
-    private _[] treeSet;
+    private Set<_> treeSet = new TreeSet<>();
 
     public ComparableTreeSet(_... arr) {
-        this.treeSet = arr;
+        treeSet.addAll(Arrays.asList(arr));
     }
 
 
@@ -24,5 +26,10 @@ public class ComparableTreeSet<_> extends TreeSet implements Comparable {
     @Override
     public int compareTo(Object o) {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return treeSet.toString();
     }
 }
