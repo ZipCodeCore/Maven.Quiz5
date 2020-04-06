@@ -6,45 +6,21 @@ package rocks.zipcode.io.quiz4.objectorientation;
 public class StringAssembler {
 
     private Character delimiter;
-    private String newDelimeter;
-    private String string;
+    private String string = "";
 
-    public StringAssembler(Character delimeter) {
+    public StringAssembler(Character delimiter) {
 
-        this.delimiter = delimeter;
-        this.newDelimeter = String.valueOf(delimeter);
-        this.string = "";
-    }
-
-    public Character delimiter() {
-        return delimiter;
-    }
-
-    public void setDelimeter(Character delimiter) {
         this.delimiter = delimiter;
-    }
-
-    public String getNewDelimeter() {
-        return String.valueOf(delimiter);
-    }
-
-    public String getString() {
-        return string;
-    }
-
-    public void setString(String string) {
-        this.string = string;
     }
 
     public StringAssembler append(String str) {
 
-        StringAssembler sa = new StringAssembler(delimiter);
-        sa.setString(str);
-        return sa;
+        string += str + delimiter;
+        return this;
     }
 
     public String assemble() {
 
-        return null;
+        return string.substring(0, string.length()-1);
     }
 }
