@@ -7,7 +7,7 @@ import java.util.TreeSet;
  */
 public class ComparableTreeSet<_> extends TreeSet<_> implements Comparable<_>{
 
-    TreeSet<_> set;
+    protected TreeSet<_> set;
 
     public ComparableTreeSet(_... arr) {
     }

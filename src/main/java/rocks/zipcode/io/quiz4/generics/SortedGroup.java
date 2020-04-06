@@ -9,23 +9,13 @@ public class SortedGroup<_> extends Group<_> {
     @Override
     public void insert(_ value) {
         list.add(value);
-        list.sort(new Comparator<_>() {
-            @Override
-            public int compare(_ o1, _ o2) {
-                return o1.toString().compareTo(o2.toString());
-            }
-        });
+        list.sort(Comparator.comparing(Object::toString));
     }
 
     @Override
     public void delete(_ value) {
         list.remove(value);
-        list.sort(new Comparator<_>() {
-            @Override
-            public int compare(_ o1, _ o2) {
-                return o1.toString().compareTo(o2.toString());
-            }
-        });
+        list.sort(Comparator.comparing(Object::toString));
     }
 
     public Integer indexOf(_ value) {
