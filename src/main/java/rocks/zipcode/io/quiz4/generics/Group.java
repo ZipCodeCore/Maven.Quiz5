@@ -14,10 +14,6 @@ public class Group<SomeType> implements GroupInterface<SomeType>{
         this.newList = new ArrayList<>();
     }
 
-    public Group(List<SomeType> list) {
-        this.newList = list;
-    }
-
     public Integer count() {
         return newList.size();
     }
