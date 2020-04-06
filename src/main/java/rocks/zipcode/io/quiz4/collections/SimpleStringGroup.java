@@ -1,16 +1,14 @@
 package rocks.zipcode.io.quiz4.collections;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
 
 
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup<T> implements Collection<T> {
-    private List<T> ssgList;
+public class SimpleStringGroup implements Iterable{
+    private List<String> ssgList;
     public SimpleStringGroup() {
         ssgList = new ArrayList<>();
     }
@@ -20,83 +18,39 @@ public class SimpleStringGroup<T> implements Collection<T> {
     }
 
     public void insert(String string) {
-        ssgList.add((T) string);
+        ssgList.add(string);
     }
 
     public Boolean has(String string) {
-        return null;
+
+        return ssgList.contains(string);
     }
 
     public String fetch(int indexOfValue) {
-        return null;
+
+        return ssgList.get(indexOfValue);
     }
 
     public void delete(String string) {
+        ssgList.remove(string);
     }
 
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public boolean contains(Object o) {
-        return false;
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T1> T1[] toArray(T1[] a) {
-        return null;
-    }
-
-    @Override
-    public boolean add(T t) {
-        return false;
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends T> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
     public void clear() {
+        ssgList.clear();
+    }
 
+    @Override
+    public Iterator<String> iterator() {
+        return ssgList.iterator();
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+
+    }
+
+    @Override
+    public Spliterator spliterator() {
+        return null;
     }
 }
