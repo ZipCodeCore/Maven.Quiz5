@@ -7,6 +7,7 @@ import java.util.List;
  * @author leon on 18/12/2018.
  */
 public class PalindromeEvaluator {
+
     public static String[] getAllPalindromes(String string) {
         String[] allSubstrings = StringEvaluator.getAllSubstrings ( string );
         ArrayList<String> allPalindromes = new ArrayList<> (  );
