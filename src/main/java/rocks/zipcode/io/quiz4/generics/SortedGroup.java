@@ -3,16 +3,16 @@ package rocks.zipcode.io.quiz4.generics;
 /**
  * @author leon on 18/12/2018.
  */
-public class SortedGroup<_> extends Group<_> {
+public class SortedGroup<SomeType> extends Group<SomeType> {
     @Override
-    public void insert(_ value) {
+    public void insert(SomeType value) {
     }
 
     @Override
-    public void delete(_ value) {
+    public void delete(SomeType value) {
     }
 
-    public Integer indexOf(_ value) {
+    public Integer indexOf(SomeType value) {
         return null;
     }
 }
