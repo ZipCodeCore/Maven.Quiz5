@@ -7,22 +7,22 @@ import rocks.zipcode.io.quiz4.fundamentals.PalindromeEvaluator;
  */
 public class PalindromeObject {
     private String input;
-    private PalindromeEvaluator palindromeEvaluator;
+    private PalindromeEvaluator palEval;
 
     public PalindromeObject(String input) {
         this.input = input;
-        this.palindromeEvaluator = new PalindromeEvaluator();
+        this.palEval = new PalindromeEvaluator();
     }
 
     public String[] getAllPalindromes(){
-        return palindromeEvaluator.getAllPalindromes(input);
+        return palEval.getAllPalindromes(input);
     }
 
     public Boolean isPalindrome(){
-        return palindromeEvaluator.isPalindrome(input);
+        return palEval.isPalindrome(input);
     }
 
     public String reverseString(){
-        return palindromeEvaluator.reverseString(input);
+        return palEval.reverseString(input);
     }
 }
