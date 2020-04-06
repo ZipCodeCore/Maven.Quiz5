@@ -18,7 +18,7 @@ public class Student {
     }
 
     public void learn(Double amountOfHours) {
-        this.studyHours +=amountOfHours;
+        this.studyHours += amountOfHours;
     }
 
     public Double getTotalStudyTime()

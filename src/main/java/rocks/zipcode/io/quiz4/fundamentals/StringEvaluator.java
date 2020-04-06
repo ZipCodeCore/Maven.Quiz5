@@ -1,6 +1,10 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.*;
 
 /**
  * @author leon on 11/12/2018.
@@ -19,11 +23,17 @@ public class StringEvaluator {
 
 
 
-    public static String[] getCommonSubstrings(String string1, String string2) {
-        return null;
+    public static String[] getCommonSubstrings(String string1, String string2)
+    {
+
+         return null;
+
     }
 
-    public static String getLargestCommonSubstring(String string1, String string2) {
+    public static String getLargestCommonSubstring(String string1, String string2)
+    {
+
+
 
         return null;
     }

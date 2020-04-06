@@ -18,11 +18,11 @@ public class StringEvaluatorObject {
 
     public String[] getCommonSubstrings(String secondInput) {
 
-        return StringEvaluator.getCommonSubstrings(string, secondInput);
+        return null;
     }
 
     public String getLargestCommonSubstring(String secondInput) {
 
-        return StringEvaluator.getLargestCommonSubstring(string, secondInput);
+        return null;
     }
 }

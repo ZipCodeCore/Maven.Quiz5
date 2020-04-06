@@ -5,11 +5,11 @@ package rocks.zipcode.io.quiz4.generics;
  */
 public class SortedGroup<_> extends Group<_> {
     @Override
-    public void insert(_ value) {
+    public void insert(Object value) {
     }
 
     @Override
-    public void delete(_ value) {
+    public void delete(Object value) {
     }
 
     public Integer indexOf(_ value) {

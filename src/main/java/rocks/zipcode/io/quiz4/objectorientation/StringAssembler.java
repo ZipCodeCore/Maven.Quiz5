@@ -12,8 +12,8 @@ public class StringAssembler {
     }
 
     public StringAssembler append(String str) {
-        stringBuilder.append(str).append(delimeter);
-        return this;
+
+        return null;
     }
     public String assemble() {
         stringBuilder.deleteCharAt(stringBuilder.lastIndexOf(""+ delimeter));
