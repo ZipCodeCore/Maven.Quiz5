@@ -12,7 +12,7 @@ public class ZipCodeWilmington {
     List<Student> cohort;
 
     public ZipCodeWilmington() {
-        this(new ArrayList<>());
+        this.cohort = new ArrayList<>();
     }
 
     public ZipCodeWilmington(List<Student> cohort) {
