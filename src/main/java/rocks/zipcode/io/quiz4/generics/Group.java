@@ -6,12 +6,18 @@ import java.util.Iterator;
  * @author leon on 18/12/2018.
  */
 public class Group<_> {
+
+    Group<?> testGroup;
+
     public Group() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+
+        testGroup = new Group<> ();
+       // throw new UnsupportedOperationException("Method not yet implemented");
     }
 
     public Integer count() {
-        return null;
+
+        return testGroup.count ();
     }
 
     public void insert(_ value) {
@@ -29,6 +35,7 @@ public class Group<_> {
     }
 
     public void clear() {
+        testGroup.clear ();
     }
 
     public Iterator<_> iterator() {
