@@ -16,7 +16,7 @@ public class PalindromeEvaluator {
             }
         //list.add(getAllPalindromes(string).toString());
 
-    return null;
+    return list.toArray(new String[list.size()]);
     }
 
     public static Boolean isPalindrome(String string) {
