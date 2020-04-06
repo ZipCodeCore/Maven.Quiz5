@@ -2,8 +2,8 @@ package rocks.zipcode.io.quiz4.collections.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
-import rocks.zipcode.io.quiz4.collections.ZipCodeWilmington;
 import rocks.zipcode.io.quiz4.collections.Student;
+import rocks.zipcode.io.quiz4.collections.ZipCodeWilmington;
 
 import java.util.ArrayList;
 import java.util.List;
