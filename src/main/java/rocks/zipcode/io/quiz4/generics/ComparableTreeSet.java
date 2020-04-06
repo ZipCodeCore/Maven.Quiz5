@@ -6,7 +6,7 @@ import java.util.logging.*;
 /**
  * @author leon on 11/12/2018.
  */
-public class ComparableTreeSet<T> extends TreeSet<T> implements Comparable<T> {
+public class ComparableTreeSet<T> extends TreeSet<T> implements Comparable<ComparableTreeSet<T>> {
 
     private TreeSet<T> treehouse;
 
@@ -22,7 +22,6 @@ public class ComparableTreeSet<T> extends TreeSet<T> implements Comparable<T> {
         this.clear();
         this.addAll(treehouse);
     }
-
 
     public ComparableTreeSet() { this.treehouse = new TreeSet<>(); }
 
@@ -53,9 +52,17 @@ public class ComparableTreeSet<T> extends TreeSet<T> implements Comparable<T> {
     }
 
     @Override
-    public int compareTo(T o) {
-        Logger.getGlobal().warning("im not sure what ive just been tested on");
-        return -5;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ComparableTreeSet)) return false;
+        if (!super.equals(o)) return false;
+        ComparableTreeSet<?> that = (ComparableTreeSet<?>) o;
+        return Objects.equals(treehouse, that.treehouse);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), treehouse);
     }
 
     @Override
