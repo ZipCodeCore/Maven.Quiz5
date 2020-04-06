@@ -13,6 +13,7 @@ public class PalindromeEvaluator {
     }
 
     public static String reverseString(String string) {
-        return null;
+        String reverseString = new StringBuilder(string).reverse().toString();
+        return reverseString;
     }
 }
