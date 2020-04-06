@@ -1,21 +1,18 @@
 package rocks.zipcode.io.quiz4.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup {
+public class SimpleStringGroup implements Iterable<String>{
 
     List<String> los;
 
     public SimpleStringGroup() {
-        try {
-            los = new ArrayList<>();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Method not yet implemented");
-        }
+        los = new ArrayList<>();
     }
 
     public Integer count() {
@@ -43,5 +40,10 @@ public class SimpleStringGroup {
 
     public void clear() {
         los.clear();
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return this.los.iterator();
     }
 }

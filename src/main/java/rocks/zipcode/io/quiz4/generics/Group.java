@@ -7,16 +7,12 @@ import java.util.List;
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<T> {
+public class Group<T> implements GroupInterface<T>{
 
     List<T> arrList;
 
     public Group() {
-        try {
-            arrList = new ArrayList<>();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Method not yet implemented");
-        }
+        arrList = new ArrayList<>();
     }
 
     public Integer count() {
@@ -44,7 +40,12 @@ public class Group<T> {
     }
 
     public Iterator<T> iterator() {
-        return null;
+        return arrList.iterator();
+    }
+
+    @Override
+    public String toString() {
+        return "" + arrList;
     }
 }
 

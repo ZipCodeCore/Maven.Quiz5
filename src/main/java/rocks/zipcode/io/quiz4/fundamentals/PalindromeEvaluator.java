@@ -1,8 +1,6 @@
 package rocks.zipcode.io.quiz4.fundamentals;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -44,9 +42,10 @@ public class PalindromeEvaluator {
     }
 
     public static String reverseString(String string) {
-        StringBuilder reversed = new StringBuilder();
-        reversed.append(string);
-        reversed.reverse();
-        return reversed.toString();
+        String reversed = "";
+        for (int i = string.length() - 1; i >= 0; i--) {
+            reversed += string.charAt(i);
+        }
+        return reversed;
     }
 }

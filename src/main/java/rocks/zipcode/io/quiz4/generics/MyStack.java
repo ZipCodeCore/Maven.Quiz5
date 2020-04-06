@@ -10,11 +10,7 @@ public class MyStack<SomeType> {
     Stack<SomeType> stack;
 
     public MyStack() {
-        try {
-            stack = new Stack<>();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Method not yet implemented");
-        }
+        stack = new Stack<>();
     }
 
     public Boolean isEmpty() {
@@ -26,11 +22,10 @@ public class MyStack<SomeType> {
     }
 
     public SomeType peek() {
-        try {
-            return stack.peek();
-        } catch (Exception e) {
-            throw new UnsupportedOperationException("Method not yet implemented");
+        if (isEmpty()) {
+            return null;
         }
+        return stack.peek();
     }
 
     public SomeType pop() {
