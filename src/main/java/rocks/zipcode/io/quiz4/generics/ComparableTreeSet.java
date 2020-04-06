@@ -37,7 +37,7 @@ public class    ComparableTreeSet<_ extends Comparable> implements Iterable<_>, 
         if (lowest == 0){
             return 0;
         }
-        if (lowest == -2||lowest>0){
+        if ((lowest < 0 && lowest > - treeSet.size()) ||lowest>0){
             return 1;
         }
         if (lowest == - treeSet.size()){
