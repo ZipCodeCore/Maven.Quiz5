@@ -21,6 +21,7 @@ public class ZipCodeWilmington {
     }
 
     public Boolean isEnrolled(Student student) {
+        if (studentList.isEmpty()) return false;
         return studentList.contains(student);
     }
 

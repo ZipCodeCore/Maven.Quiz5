@@ -25,6 +25,7 @@ public class SimpleStringGroup implements Iterable<String> {
     }
 
     public Boolean has(String string) {
+        if (arrayList.isEmpty()) return false;
         return arrayList.contains(string);
     }
 

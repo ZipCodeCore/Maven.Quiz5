@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /**
  * @author leon on 18/12/2018.
  */
-public class SortedGroup<_ extends Comparable> extends Group<_> {
+public class SortedGroup<_ extends Comparable<_>> extends Group<_> {
 
     List<_> arrayList = new ArrayList<>();
 

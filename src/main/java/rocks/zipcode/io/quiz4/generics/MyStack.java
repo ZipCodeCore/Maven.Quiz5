@@ -30,12 +30,7 @@ public class MyStack<SomeType> implements Iterable<SomeType> {
     }
 
     public SomeType pop() {
-        if (stack.pop() == null || stack.peek() == null || isEmpty()) {
-            return null;
-        }
-        SomeType remove = stack.pop();
-        stack.pop();
-        return remove;
+        return stack.pop();
     }
 
     @Override
