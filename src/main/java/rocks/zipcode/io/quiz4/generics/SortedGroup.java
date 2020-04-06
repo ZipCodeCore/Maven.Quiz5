@@ -1,40 +1,23 @@
 package rocks.zipcode.io.quiz4.generics;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Arrays;
+import java.util.Collections;
+
 
 /**
  * @author leon on 18/12/2018.
  */
-public class SortedGroup<_> extends Group<_> {
+public class SortedGroup<_ extends Comparable> extends Group<_> {
+
+    public SortedGroup() {
+        super();
+    }
 
     @Override
     public void insert(_ value) {
-        if(list.size() == 0){
-            list.add(value);
-        } else if(list.get(list.size()-1).toString().compareTo(value.toString()) == 0 ){
-            list.add(value);
-        } else if(list.get(list.size() - 1).toString().compareTo(value.toString()) < 0){
-            list.add(value);
-        } else {
-            List<_> newList = new ArrayList<>();
-            for (int i = 0; i < list.size(); i++) {
-                if(list.get(i).toString().compareTo(value.toString()) == 0){
-                    newList.add(list.get(i));
-                    newList.add(value);
-                    for (int j = 1; j < list.size(); j++) {
-                        newList.add(list.get(j));
-                    }
-                    list = newList;
-                    break;
-                }
-            }
-
-            _ temp = list.get(list.size()-1);
-            list.remove(temp);
-            list.add(value);
-            list.add(temp);
-        }
+        this.list.add(value);
+        Collections.sort(list);
     }
 
     @Override

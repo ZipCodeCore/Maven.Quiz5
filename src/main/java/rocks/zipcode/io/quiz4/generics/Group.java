@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Group<_> implements GroupInterface<_>{
 
-    List<_> list;
+   public List<_> list;
 
     public Group() {
           list = new ArrayList<>();

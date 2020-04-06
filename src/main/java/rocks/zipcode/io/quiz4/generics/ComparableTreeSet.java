@@ -8,7 +8,7 @@ import java.util.stream.Stream;
  * @author leon on 11/12/2018.
  */
 public class ComparableTreeSet<_> extends TreeSet implements Comparable<_>{
-
+    TreeSet<_> mySet;
     Group<_> myList;
 
     public ComparableTreeSet(_... arr) {
@@ -49,7 +49,6 @@ public class ComparableTreeSet<_> extends TreeSet implements Comparable<_>{
             else builder.append(arr[i])
                     .append(", ");
         }
-
         return builder.toString();
     }
 }
