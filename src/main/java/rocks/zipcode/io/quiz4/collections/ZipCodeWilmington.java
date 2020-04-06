@@ -1,22 +1,32 @@
 package rocks.zipcode.io.quiz4.collections;
 
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author leon on 11/12/2018.
  */
 public class ZipCodeWilmington {
+    List<Student> list;
+
+    public ZipCodeWilmington(){
+        list = new ArrayList<>();
+    }
+
     public void enroll(Student student) {
+        list.add(student);
     }
 
     public Boolean isEnrolled(Student student) {
-        return null;
+        return list.contains(student);
     }
 
     public void lecture(double numberOfHours) {
+        list.forEach(s -> s.learn(numberOfHours));
     }
 
     public Map<Student, Double> getStudyMap() {
-        return null;
+        Map<Student, Double> map = new LinkedHashMap<>();
+        list.forEach(s -> map.put(s,s.sum));
+        return map;
     }
 }
