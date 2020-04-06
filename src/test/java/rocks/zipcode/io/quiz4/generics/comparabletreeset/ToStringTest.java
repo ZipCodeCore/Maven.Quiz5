@@ -35,4 +35,5 @@ public class ToStringTest {
         // then
         Assert.assertEquals(expected, actual);
     }
+
 }
