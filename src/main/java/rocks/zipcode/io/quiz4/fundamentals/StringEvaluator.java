@@ -24,6 +24,11 @@ public class StringEvaluator {
     }
 
     public static String[] getCommonSubstrings(String string1, String string2) {
+        getAllSubstrings(string1);
+        getAllSubstrings(string2);
+        if (getAllSubstrings(string1).equals(getAllSubstrings(string2))){
+            //not sure where to go from here at the moment
+        }
         return null;
     }
 
