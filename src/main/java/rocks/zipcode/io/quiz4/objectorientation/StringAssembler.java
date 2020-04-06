@@ -16,12 +16,19 @@ public class StringAssembler
     // TODO: Come back to this
     public StringAssembler append(String str)
     {
-        assembled = str + delimiter;
+        if(assembled != null)
+        {
+            assembled = assembled + str + delimiter;
+        }
+        else
+        {
+            assembled = str + delimiter;
+        }
         return this;
     }
 
     public String assemble()
     {
-        return assembled;
+        return assembled.substring(0, assembled.length() - 1);
     }
 }

@@ -5,11 +5,13 @@ import java.util.Collections;
 /**
  * @author leon on 18/12/2018.
  */
-public class SortedGroup<T> extends Group<T>
+public class SortedGroup<T extends Comparable<T>> extends Group<T>
 {
     @Override
     public void insert(T value)
     {
+        listOfTypes.add(value);
+        Collections.sort(listOfTypes);
     }
 
     @Override

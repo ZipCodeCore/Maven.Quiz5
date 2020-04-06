@@ -3,6 +3,7 @@ package rocks.zipcode.io.quiz4.generics;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * @author leon on 18/12/2018.
@@ -47,5 +48,16 @@ public class Group<T> implements GroupInterface<T>
 
     public Iterator<T> iterator() {
         return listOfTypes.iterator();
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner sj = new StringJoiner(", ", "[", "]");
+        for(T e : listOfTypes)
+        {
+            sj.add(e.toString());
+        }
+
+        return sj.toString();
     }
 }
