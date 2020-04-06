@@ -54,4 +54,9 @@ public class Group<SomeType> implements Iterable, GroupInterface {
     public Iterator<SomeType> iterator() {
         return list.iterator();
     }
+
+    @Override
+    public String toString() {
+        return "" + list;
+    }
 }
