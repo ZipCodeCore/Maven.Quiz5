@@ -1,19 +1,16 @@
 package rocks.zipcode.io.quiz4.generics;
 
 import java.util.Iterator;
-import java.util.Spliterator;
 import java.util.Stack;
-import java.util.function.Consumer;
 
 /**
  * @author leon on 11/12/2018.
  */
-public class MyStack<SomeType> implements Iterable<SomeType>{
+public class MyStack<SomeType> implements Iterable<SomeType> {
 
     private Stack<SomeType> stacks = new Stack<>();
+
     public MyStack() {
-
-
 
         //throw new UnsupportedOperationException("Method not yet implemented");
     }
@@ -27,7 +24,7 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
     }
 
     public SomeType peek() {
-        if(stacks.size() == 0) {
+        if (stacks.size() == 0) {
             return null;
         } else {
             return stacks.peek();
@@ -42,16 +39,7 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
 
     @Override
     public Iterator<SomeType> iterator() {
-        return stacks.iterator();
-    }
-
-    @Override
-    public void forEach(Consumer<? super SomeType> action) {
-
-    }
-
-    @Override
-    public Spliterator<SomeType> spliterator() {
         return null;
     }
 }
+

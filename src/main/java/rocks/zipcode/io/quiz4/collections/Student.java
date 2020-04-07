@@ -6,7 +6,6 @@ package rocks.zipcode.io.quiz4.collections;
 public class Student {
     private Integer id;
     private Double amountOfHours;
-    private Double totalStudyTime;
     public Student() {
         this(0);
     }

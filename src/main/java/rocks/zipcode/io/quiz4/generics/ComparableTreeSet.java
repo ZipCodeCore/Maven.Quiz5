@@ -7,6 +7,7 @@ import java.util.TreeSet;
  */
 public class    ComparableTreeSet<_> {
     private TreeSet<_> trees= new TreeSet<_>();
+
     public ComparableTreeSet(_... arr) {
 
     }
@@ -19,5 +20,6 @@ public class    ComparableTreeSet<_> {
     public int compareTo(ComparableTreeSet<_> o) {
         return 0;
     }
+    //Test--ComparableTreeSet<String> set1 = new ComparableTreeSet<>("Arty", "Fee", "Shawl");
 
 }
