@@ -20,12 +20,11 @@ public class ZipCodeWilmington {
     }
 
     public void lecture(double numberOfHours) {
-
-
     }
 
 
     public Map<Student, Double> getStudyMap() {
 
-        return null;}
+        return null;
+    }
 }
