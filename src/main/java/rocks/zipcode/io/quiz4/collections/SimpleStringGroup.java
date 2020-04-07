@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup implements Iterable{
+public class SimpleStringGroup implements Iterable<String>{
     private List<String> ssgList;
     public SimpleStringGroup() {
         ssgList = new ArrayList<>();
@@ -44,13 +44,5 @@ public class SimpleStringGroup implements Iterable{
         return ssgList.iterator();
     }
 
-    @Override
-    public void forEach(Consumer action) {
 
-    }
-
-    @Override
-    public Spliterator spliterator() {
-        return null;
-    }
 }

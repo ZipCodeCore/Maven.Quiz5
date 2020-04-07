@@ -148,7 +148,6 @@ public class GetStudyMapTest {
         Assert.assertEquals(expectedStudent1, actualStudent1);
         Assert.assertEquals(expectedStudyTime1, actualStudyTime1);
 
-
         Assert.assertEquals(expectedStudent2, actualStudent2);
         Assert.assertEquals(expectedStudyTime2, actualStudyTime2);
 

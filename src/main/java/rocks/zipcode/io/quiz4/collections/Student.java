@@ -15,6 +15,10 @@ public class Student {
         studyHours = 0.0;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     public void learn(Double amountOfHours) {
         studyHours += amountOfHours;
     }
