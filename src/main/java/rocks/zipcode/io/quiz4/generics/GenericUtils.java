@@ -40,11 +40,9 @@ public class GenericUtils{
         Iterator<Set<T>> power = Sets.powerSet(originalSet).iterator();
         ArrayList<List<T>> powerToList = new ArrayList<>();
         power.forEachRemaining(set -> powerToList.add((new ArrayList<>(set))));
-        powerToList.forEach(System.out::println);
         //[[], [x], [y], [x, y], [z], [x,z], [y,z], [x, y, z]]
         Set<List<T>> result = new LinkedHashSet<>();
         powerToList.iterator().forEachRemaining(list -> result.addAll(Collections2.permutations(list)));
-        result.forEach(System.out::println);
         //[[], [x], [y], [x, y], [y, x], [z], [x, z], [z, x], [y, z], [z, y], [x, y, z], [x, z, y], [z, x, y], [z, y, x], [y, z, x], [y, x, z]]
         Collection<List<T>> unwantedPerms = removeOriginalSet(originalSet);
         result.removeAll(unwantedPerms);
