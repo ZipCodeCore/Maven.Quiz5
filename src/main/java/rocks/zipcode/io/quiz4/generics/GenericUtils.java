@@ -6,6 +6,7 @@ import java.util.*;
  * @author leon on 11/12/2018.
  */
 public class GenericUtils {
+
     public static <_ extends Comparable> Iterable<? extends Iterable<_>> powerSet(Set<_> originalSet) {
         List<_> original = new ArrayList<>(originalSet);
         List<List<_>> powerList = new ArrayList<>();
