@@ -17,6 +17,7 @@ public class    ComparableTreeSet<_> {
     }
 
     public int compareTo(ComparableTreeSet<_> o) {
-        return Integer.valueOf(0);
+        return 0;
     }
+
 }

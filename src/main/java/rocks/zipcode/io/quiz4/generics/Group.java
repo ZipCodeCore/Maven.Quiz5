@@ -7,9 +7,10 @@ import java.util.List;
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<_> implements GroupInterface<_>{
+public class Group<_> implements Iterable<_>,GroupInterface<_>{
     List<_> list = new ArrayList<>();
     public Group() {
+        this.list = new ArrayList<>();
         //throw new UnsupportedOperationException("Method not yet implemented");
     }
 
