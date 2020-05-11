@@ -39,6 +39,6 @@ public class Group<_> implements Iterable<_>, GroupInterface<_> {
     }
 
     public Iterator<_> iterator() {
-        return null;
+        return result.iterator();
     }
 }

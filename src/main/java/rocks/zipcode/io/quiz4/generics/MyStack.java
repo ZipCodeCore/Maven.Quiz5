@@ -23,6 +23,9 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
     }
 
     public SomeType peek() {
+        if(stack.size() == 0){
+            return null;
+        }
        return stack.peek();
     }
 
@@ -32,6 +35,6 @@ public class MyStack<SomeType> implements Iterable<SomeType>{
 
     @Override
     public Iterator<SomeType> iterator() {
-        return null;
+        return stack.iterator();
     }
 }

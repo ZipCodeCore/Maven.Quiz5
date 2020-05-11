@@ -40,6 +40,6 @@ public class SimpleStringGroup implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
-        return null;
+        return result.iterator();
     }
 }

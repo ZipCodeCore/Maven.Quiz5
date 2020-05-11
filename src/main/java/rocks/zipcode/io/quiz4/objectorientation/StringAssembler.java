@@ -5,17 +5,26 @@ package rocks.zipcode.io.quiz4.objectorientation;
  */
 public class StringAssembler {
     Character delimeter;
+    String string = "";
+
     public StringAssembler(Character delimeter) {
         this.delimeter = delimeter;
     }
 
     public StringAssembler append(String str) {
 
-        return null;
+        if(string.length() == 0){
+            string= str;
+
+        } else {
+            string += delimeter + str;
+        }
+
+        return this;
     }
 
 
     public String assemble() {
-        return null;
+        return this.string;
     }
 }
