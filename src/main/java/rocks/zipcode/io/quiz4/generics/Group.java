@@ -6,41 +6,47 @@ import java.util. *;
 /**
  * @author leon on 18/12/2018.
  */
-public class Group<_> implements Iterable<_>{
-    List<_> groupList;
 
+public class Group<E> implements GroupInterface<E> {
+    List<E> myCollection;
     public Group() {
-        groupList = new ArrayList<>();
-
+        this.myCollection = new ArrayList<>();
     }
 
     public Integer count() {
-        return groupList.size();
+
+        return myCollection.size();
     }
 
-    public void insert(Object value) {
-        groupList.add((_) value);
+    public void insert(E value) {
+        myCollection.add(value);
     }
 
-    public Boolean has(Object value) {
-        return groupList.contains(value);
+    public Boolean has(E value) {
+
+        return myCollection.contains(value);
     }
 
-    public _ fetch(int indexOfValue) {
-        return groupList.get(indexOfValue);
+    public E fetch(int indexOfValue) {
+
+        return myCollection.get(indexOfValue);
     }
 
-    public void delete(Object value) {
-        groupList.remove(value);
+    public void delete(E value) {
+        myCollection.remove(value);
     }
 
     public void clear() {
-        groupList.clear();
+        myCollection.clear();
     }
 
-    public Iterator<_> iterator() {
-        return groupList.iterator();
+    public Iterator<E> iterator() {
+        return myCollection.iterator();
     }
 
-
+    @Override
+    public String toString() {
+        E[] newArray = (E[]) myCollection.toArray();
+        return Arrays.toString(newArray);
+    }
 }
