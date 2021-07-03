@@ -24,6 +24,7 @@ public class NestedSetCompareMultipleElementNeutral {
 
         // then
         Assert.assertTrue(actual == 0);
+
     }
 
 
